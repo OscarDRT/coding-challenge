@@ -39,7 +39,7 @@ class food_trucks {
         this.markers.clearLayers();
         
         listMarkers.forEach(element => {
-            const {
+            let {
                 latitude,
                 longitude,
                 address, 
@@ -48,6 +48,7 @@ class food_trucks {
                 locationdescription,
                 dayshours
             } = element;
+     
 
             const popUp = L.popup()
                 .setContent(`<p>Name: ${applicant}</p>
@@ -69,14 +70,20 @@ class food_trucks {
     searchFood(search) {
         this.api.getData()
             .then(res => {
-                const response = res.data;
-
+                let response = res.data;
                 this.filterByFood(response, search);
             })
     }
 
     filterByFood(places, search) {
         if (places) {
+
+            places.forEach(element => {
+                if (element.fooditems) {
+                    element.fooditems = element.fooditems.toLowerCase()
+                }
+            });
+            
             const filterItem = places.filter( filterItem => {
                 if (filterItem.fooditems) {
                     return filterItem.fooditems.indexOf(search) !== -1
