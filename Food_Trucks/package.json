@@ -8,6 +8,7 @@
     "url" : "https://github.com/OscarDRT/coding-challenge.git"
   },
   "scripts": {
+    "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
   "keywords": [],
