@@ -1,5 +1,8 @@
 class API {
+    // method to make request to the API of food trucks
     async getData() {
+
+        // definition of request type and credentials
         var miInit = { 
             method: 'GET',
             data: {
@@ -8,6 +11,7 @@ class API {
             }
             };
         
+        // request to the API and JSON format to process the information that is
         const data = await (await fetch('https://data.sfgov.org/resource/rqzj-sfat.json', miInit)).json();
 
         return {
