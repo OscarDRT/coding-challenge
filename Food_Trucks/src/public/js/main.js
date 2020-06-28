@@ -13,7 +13,7 @@ class food_trucks {
     }
 
     initializeMap() {
-        var map = L.map('map').setView([37.7576793, -122.5076411], 12);
+        var map = L.map('map').setView([37.7525403, -122.4417211], 12);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -58,10 +58,15 @@ class food_trucks {
                              <p>${dayshours}</p>
                 `)
 
+            const MyIcon = L.icon({
+                iconUrl: './food-truck.png',
+                iconSize: [15, 15]
+            });
+
             const marker = new L.marker([
                 parseFloat(latitude),
                 parseFloat(longitude)
-            ]).bindPopup(popUp);
+            ], {icon: MyIcon}).bindPopup(popUp);
             this.markers.addLayer(marker);
         });
         this.markers.addTo(this.map);
