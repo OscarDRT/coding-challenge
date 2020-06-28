@@ -69,7 +69,7 @@ class food_trucks {
             // To change the default icon
             const MyIcon = L.icon({
                 iconUrl: './food-truck.png',
-                iconSize: [15, 15]
+                iconSize: [20, 20]
             });
             //the marker is created
             const marker = new L.marker([

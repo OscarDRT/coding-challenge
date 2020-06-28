@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/OscarDRT/coding-challenge.git"
+    "type": "git",
+    "url": "https://github.com/OscarDRT/coding-challenge.git"
   },
   "scripts": {
-    "start": "node src/index.js",
+    "start": "pm2 start src/index.js --name food-trucks --watch --ignore-watch='node_modules'",
     "dev": "nodemon src/index.js"
   },
   "keywords": [],
