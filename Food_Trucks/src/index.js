@@ -1,3 +1,5 @@
+// Server is set up with express
+
 const express = require('express');
 const engine = require('ejs-mate')
 const path = require('path')
@@ -8,7 +10,7 @@ const app = express();
 
 // settings
 app.engine('ejs', engine);
-app.set('port', 3000);
+app.set('port', 8080);
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, '/views'))
 
