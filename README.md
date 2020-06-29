@@ -61,4 +61,59 @@ CSS y estilos de bootstrap
   Contiene las plantillas de las diferentes vistas del front-end
   
   
-  
+Instalacion 
+
+
+nodejs
+```sh
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+$ source~/.bashrc
+$ nvm install node --lts
+$ node --version
+$ npm --version
+```
+clone
+```sh
+$ git clone https://github.com/OscarDRT/coding-challenge.git
+$ cd Food_Trucks/
+$ npm install
+```
+
+ufw
+```sh
+$ sudo ufw enable
+$ sudo ufw allow ssh
+$ sudo ufw allow http
+$ sudo ufw allow https
+$ sudo ufw reload
+```
+Nginx
+```sh
+$ sudo apt install nginx
+$ sudo service nginx start
+$ mv food-trucks.me /etc/nginx/sites-available/
+$ nginx -t 
+$ ln -s /etc/nginx/sites-available/food-trucks.me /etc/nginx/sites-enabled/food-trucks.me
+$ nginx -t
+$ sudo service nginx restart
+$ sudo service nginx status
+```
+pm2
+```sh
+$ npm install pm2 -g
+$ pm2 --version
+$ npm start  // Corre un script definido en package.json
+$ pm2 startup
+$ pm2 save
+```
+
+certbot
+```sh
+$ sudo add-apt-repository ppa:certbot/certbot
+$ sudo apt update
+$ sudo apt-get install certbot python3-certbot-nginx
+$ sudo certbot --nginx -d www.food-trucks.me -d food-trucks.me
+
+$ cerbot renew --dry-run // para renovar ssl
+```
+
