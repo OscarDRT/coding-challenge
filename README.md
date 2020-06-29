@@ -124,3 +124,5 @@ Advantages of using pm2
   - Allows applications to be kept active at all times and reloaded, avoiding downtime
   - Memory and cps monitoring of our processes plus data in the paid version ($ pm2 monit)
   - Handling of logs
+  - Start your applications once the server starts
+  - Ability to "watch your code" if your code changes
