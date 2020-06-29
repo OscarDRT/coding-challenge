@@ -19,7 +19,7 @@ mongoose.connect(url, {
 require('./config/passport')(passport);
 
 // settings
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8080);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -29,7 +29,7 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: false}));
 // required for passport
 app.use(session({
-	secret: 'faztwebtutorialexample',
+	secret: 'oscardrt',
 	resave: false,
 	saveUninitialized: false
 }));
