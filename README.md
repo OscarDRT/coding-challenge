@@ -67,7 +67,7 @@ listen to events, such as clicking on different buttons, or user input in the se
 It contains the templates of the different views of the front-end
   
   
-Instalacion 
+Installation 
 
 nodejs
 ```sh
@@ -106,7 +106,7 @@ pm2
 ```sh
 $ npm install pm2 -g
 $ pm2 --version
-$ npm start  // Corre un script definido en package.json
+$ npm start  // Runs a script defined in package.json 
 $ pm2 startup
 $ pm2 save
 ```
