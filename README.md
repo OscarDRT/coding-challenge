@@ -21,11 +21,12 @@ Se implementa en el back-end nodejs con los siguentes modulos.
 Se estrablace el modelo de registro y autenticacion de usario
 Se sifra la contraseña y en caso de ser un login se compara con la registrada por el usuario
 
-> Food_Trucks/src/app/routes.js
+[Food_Trucks/src/app/routes.js](https://github.com/OscarDRT/coding-challenge/blob/master/Food_Trucks/src/app/routes.js)
+
 Se crea un modelo de rutas API que permite capturar las peticiones GET y POST del usuario
+Los metodos POST hacen uso de "passport.authenticate" para validar los datos
 
-
-
-
+[Food_Trucks/src/config/passport.js](https://github.com/OscarDRT/coding-challenge/blob/master/Food_Trucks/src/config/passport.js)
+Contiene las estrategias de auntenticacion y los mensajes de exito o error, si se requere agragar nuevos metodos de autenticacion como facebook, google en esta seccion se estableces las estrategias
 
 sudo env PATH=$PATH:/home/ubuntu/.nvm/versions/node/v14.4.0/bin /home/ubuntu/.nvm/versions/node/v14.4.0/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu
