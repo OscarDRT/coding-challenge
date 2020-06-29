@@ -38,12 +38,20 @@ CSS y estilos de bootstrap
 ---
 [JS](https://github.com/OscarDRT/coding-challenge/tree/master/Food_Trucks/src/public/js)
 
-[Clase API:](https://github.com/OscarDRT/coding-challenge/blob/master/Food_Trucks/src/public/js/API.js)
+[Class API:](https://github.com/OscarDRT/coding-challenge/blob/master/Food_Trucks/src/public/js/API.js)
 
   - getData(): Realiza peticion a la API con la data y la convierte en JSON para retornar un arreglo con estos datos 
 
 [APP](https://github.com/OscarDRT/coding-challenge/blob/master/Food_Trucks/src/public/js/app.js)
 
+  - Esta pendiente a los enventos, como el click a los diferentes botones, o el input por el usuario en la barra de busqueda
 
-[MAIN](https://github.com/OscarDRT/coding-challenge/blob/master/Food_Trucks/src/public/js/main.js)
+[class food_trucks](https://github.com/OscarDRT/coding-challenge/blob/master/Food_Trucks/src/public/js/main.js)
 
+  - contructor(): Inicializar un objeto de la clase
+  - initializeMap(): Carga el mapa (leaflet)
+  - viewLocations(): Usa la instancia de la clase API para realizar la peticion de los datos por medios del metodo getData(), luego pasa la respuesta a     displayMarker(listMarkers)
+  - displayMarker(listMarkers): Agrega una lista de marcadores a una capa del mapa
+  - searchFood(search): Recibe la busqueda del usuario y junto con los datos que obtiene de la API se los envia a filterByFood(response, search) para filtar
+  - filterByFood(places, search): Hace un recorrido de la lista de datos buscando coincidencias con la busqueda del usuario y retornando estos datos en una nueva lista, se usa displayMarker(Search) para agregar una capa solo con los marcadores que coinciden con la busqueda
+  
