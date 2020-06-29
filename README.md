@@ -1,7 +1,7 @@
 # coding-challenge
 ## Food Trucks
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+[![N|Solid](https://github.com/OscarDRT/coding-challenge/blob/master/captures/capture.png)
 
 Context
 
