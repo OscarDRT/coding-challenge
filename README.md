@@ -1,7 +1,15 @@
 # coding-challenge
 ## Food Trucks
 
-Se implemeta un servicio con login y registro para usuarios que requeren conocer las ubicaciones de camiones de comida segun sus gustos culinarios (coffee, tea, burger, etc).
+[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+
+Context
+
+There is a need to know in the city of San Francisco California, the different food trucks that I can find in the city.
+
+To meet this need a web application is implemented with a map that provides the different locations of the food trucks in the city.
+What happens if the user wants to know which places in the city sell their favorite food like tacos or coffee, for this a search bar is implemented that filters the places by the user's food preference. To serve the data of the places, the API is consulted and provides 
+[DataSF](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat)
 
 It is implemented in the back-end nodejs with the following modules
 
