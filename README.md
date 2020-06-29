@@ -17,6 +17,7 @@ Se implementa en el back-end nodejs con los siguentes modulos.
 |express-session|Almacena los datos de sesion en el servidor|
 
 [Food_Trucks/src/app/models/user.js](https://github.com/OscarDRT/coding-challenge/blob/master/Food_Trucks/src/app/models/user.js)
+
 Se estrablace el modelo de registro y autenticacion de usario
 Se sifra la contraseña y en caso de ser un login se compara con la registrada por el usuario
 
