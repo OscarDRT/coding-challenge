@@ -5,6 +5,7 @@ Se implemeta un servicio con login y registro para usuarios que requeren conocer
 
 Se implementa en el back-end nodejs con los siguentes modulos.
 
+[Food_Trucks/src/index.js](https://github.com/OscarDRT/coding-challenge/blob/master/Food_Trucks/src/index.js)
 |nombre|uso|
 |---|---|
 |express|Para levantar el servidor y configuraciones del mismo|
@@ -54,4 +55,10 @@ CSS y estilos de bootstrap
   - displayMarker(listMarkers): Agrega una lista de marcadores a una capa del mapa
   - searchFood(search): Recibe la busqueda del usuario y junto con los datos que obtiene de la API se los envia a filterByFood(response, search) para filtar
   - filterByFood(places, search): Hace un recorrido de la lista de datos buscando coincidencias con la busqueda del usuario y retornando estos datos en una nueva lista, se usa displayMarker(Search) para agregar una capa solo con los marcadores que coinciden con la busqueda
+  
+  [views](https://github.com/OscarDRT/coding-challenge/tree/master/Food_Trucks/src/views)
+  
+  Contiene las plantillas de las diferentes vistas del front-end
+  
+  
   
