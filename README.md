@@ -3,66 +3,63 @@
 
 Se implemeta un servicio con login y registro para usuarios que requeren conocer las ubicaciones de camiones de comida segun sus gustos culinarios (coffee, tea, burger, etc).
 
-Se implementa en el back-end nodejs con los siguentes modulos.
+It is implemented in the back-end nodejs with the following modules
 
 [Food_Trucks/src/index.js](https://github.com/OscarDRT/coding-challenge/blob/master/Food_Trucks/src/index.js)
-|nombre|uso|
+|name|use|
 |---|---|
-|express|Para levantar el servidor y configuraciones del mismo|
-|mongoose|ORM para gestionar enntre los objetos y las tablas de la base de datos|
-|passport|Manejar estrategia de autenticacion|
-|connect-flash|Enviar mensajes al usuario respecto al login o registro|
-|morgan|Vista de logs de nuestra aplicacion|
-|cookie-parser|Manejo de cookies del lado del servidor|
-|body-parser|Acceder al cuerpo de las peticiones del usuario|
-|express-session|Almacena los datos de sesion en el servidor|
+|express|To raise the server and server settings|
+|mongoose|ORM to manage between objects and database tables|
+|passport|Manage authentication strategy|
+|connect-flash|Send messages to the user regarding login and signup|
+|morgan|View logs of our application|
+|cookie-parser|Handling of server-side cookies|
+|body-parser|Accessing the body of the user's requests|
+|express-session|Stores session data on the server|
 
 [Food_Trucks/src/app/models/user.js](https://github.com/OscarDRT/coding-challenge/blob/master/Food_Trucks/src/app/models/user.js)
 
-Se estrablace el modelo de registro y autenticacion de usario
-Se sifra la contraseña y en caso de ser un login se compara con la registrada por el usuario
+The registration and user authentication model is released
+The password is encrypted and in case of a login it is compared with the one registered by the user
 
 [Food_Trucks/src/app/routes.js](https://github.com/OscarDRT/coding-challenge/blob/master/Food_Trucks/src/app/routes.js)
 
-Se crea un modelo de rutas API que permite capturar las peticiones GET y POST del usuario
-Los metodos POST hacen uso de "passport.authenticate" para validar los datos
+An API route model is created to capture the user's GET and POST requests
+POST methods use "passport.authenticate" to validate data
 
 [Food_Trucks/src/config/passport.js](https://github.com/OscarDRT/coding-challenge/blob/master/Food_Trucks/src/config/passport.js)
-Contiene las estrategias de auntenticacion y los mensajes de exito o error, si se requere agragar nuevos metodos de autenticacion como facebook, google en esta seccion se estableces las estrategias
 
-sudo env PATH=$PATH:/home/ubuntu/.nvm/versions/node/v14.4.0/bin /home/ubuntu/.nvm/versions/node/v14.4.0/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu
+It contains the authentication strategies and success or error messages, if it is required to add new authentication methods such as facebook, google in this section sets the strategies
 
 [Hojas de estilo](https://github.com/OscarDRT/coding-challenge/tree/master/Food_Trucks/src/public/css)
 
-CSS y estilos de bootstrap
+CSS and bootstrap styles
 
----
 [JS](https://github.com/OscarDRT/coding-challenge/tree/master/Food_Trucks/src/public/js)
 
 [Class API:](https://github.com/OscarDRT/coding-challenge/blob/master/Food_Trucks/src/public/js/API.js)
 
-  - getData(): Realiza peticion a la API con la data y la convierte en JSON para retornar un arreglo con estos datos 
+  - getData(): Requests the API with the data and converts it into JSON to return an array with this data
 
 [APP](https://github.com/OscarDRT/coding-challenge/blob/master/Food_Trucks/src/public/js/app.js)
 
-  - Esta pendiente a los enventos, como el click a los diferentes botones, o el input por el usuario en la barra de busqueda
+listen to events, such as clicking on different buttons, or user input in the search bar
 
 [class food_trucks](https://github.com/OscarDRT/coding-challenge/blob/master/Food_Trucks/src/public/js/main.js)
 
-  - contructor(): Inicializar un objeto de la clase
-  - initializeMap(): Carga el mapa (leaflet)
-  - viewLocations(): Usa la instancia de la clase API para realizar la peticion de los datos por medios del metodo getData(), luego pasa la respuesta a     displayMarker(listMarkers)
-  - displayMarker(listMarkers): Agrega una lista de marcadores a una capa del mapa
-  - searchFood(search): Recibe la busqueda del usuario y junto con los datos que obtiene de la API se los envia a filterByFood(response, search) para filtar
-  - filterByFood(places, search): Hace un recorrido de la lista de datos buscando coincidencias con la busqueda del usuario y retornando estos datos en una nueva lista, se usa displayMarker(Search) para agregar una capa solo con los marcadores que coinciden con la busqueda
+  - contructor(): Initialize an object of the class
+  - initializeMap(): Load the map (leaflet)
+  - viewLocations(): Uses the API class instance to make the data request by the getData() method, then passes the response to displayMarker(listMarkers)
+  - displayMarker(listMarkers): Adds a list of markers to a map layer
+  - searchFood(search): Receives the user's search and together with the data it gets from the API sends it to filterByFood(response, search) to filter
+  - filterByFood(places, search): Scans the list of data for matches with the user's search and returns this data in a new list, using displayMarker(Search) to add a layer with only the markers that match the search
   
-  [views](https://github.com/OscarDRT/coding-challenge/tree/master/Food_Trucks/src/views)
+[views](https://github.com/OscarDRT/coding-challenge/tree/master/Food_Trucks/src/views)
   
-  Contiene las plantillas de las diferentes vistas del front-end
+It contains the templates of the different views of the front-end
   
   
 Instalacion 
-
 
 nodejs
 ```sh
@@ -78,7 +75,6 @@ $ git clone https://github.com/OscarDRT/coding-challenge.git
 $ cd Food_Trucks/
 $ npm install
 ```
-
 ufw
 ```sh
 $ sudo ufw enable
@@ -106,7 +102,6 @@ $ npm start  // Corre un script definido en package.json
 $ pm2 startup
 $ pm2 save
 ```
-
 certbot
 ```sh
 $ sudo add-apt-repository ppa:certbot/certbot
@@ -114,6 +109,6 @@ $ sudo apt update
 $ sudo apt-get install certbot python3-certbot-nginx
 $ sudo certbot --nginx -d www.food-trucks.me -d food-trucks.me
 
-$ cerbot renew --dry-run // para renovar ssl
+$ cerbot renew --dry-run // to renew ssl
 ```
 
