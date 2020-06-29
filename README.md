@@ -1,7 +1,7 @@
 # coding-challenge
 ## Food Trucks
 
-[![N|Solid](https://github.com/OscarDRT/coding-challenge/blob/master/captures/capture.png)
+![N|Solid](https://github.com/OscarDRT/coding-challenge/blob/master/captures/capture.png)
 
 Context
 
