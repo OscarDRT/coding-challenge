@@ -7,9 +7,7 @@ Context
 
 There is a need to know in the city of San Francisco California, the different food trucks that I can find in the city.
 
-To meet this need a web application is implemented with a map that provides the different locations of the food trucks in the city.
-What happens if the user wants to know which places in the city sell their favorite food like tacos or coffee, for this a search bar is implemented that filters the places by the user's food preference. To serve the data of the places, the API is consulted and provides 
-[DataSF](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat)
+To meet this need, a web application is implemented with a map that provides the different locations of the food trucks in the city. What happens if the user wants to know which places in the city sell their favorite food like tacos or coffee, for this a search bar is implemented that filters the places by the user's food preference. To serve the places data, the API provided by[DataSF](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat) for this purpose is consulted
 
 It is implemented in the back-end nodejs with the following modules
 
